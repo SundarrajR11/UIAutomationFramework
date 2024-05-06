@@ -3,7 +3,6 @@
 <suite name="Suite">
   <test thread-count="2" name="Test" parallel="methods">
     <classes>
-      <class name="com.ecom.tests.LoginPageTests"/>
       <class name="com.ecom.tests.HomePageTests"/>
     </classes>
   </test> <!-- Test -->

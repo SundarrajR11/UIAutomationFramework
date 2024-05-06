@@ -9,11 +9,51 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">10,137</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">1,955</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ecom.tests.HomePageTests</td><td><a href="#m0">testThree</a></td><td rowspan="1">1714904712078</td><td rowspan="1">204</td></tr><tr class="passedodd"><td rowspan="1">com.ecom.tests.LoginPageTests</td><td><a href="#m1">testOne</a></td><td rowspan="1">1714904705432</td><td rowspan="1">2562</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.ecom.tests.HomePageTests</td><td><a href="#m0">setUp</a></td><td rowspan="1">1715000372586</td><td rowspan="1">1897</td></tr><tr class="failedodd"><td rowspan="1">com.ecom.tests.LoginPageTests</td><td><a href="#m1">setUp</a></td><td rowspan="1">1715000372586</td><td rowspan="1">1662</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.ecom.tests.HomePageTests</td><td><a href="#m2">tearDown</a></td><td rowspan="1">1715000374491</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.ecom.tests.LoginPageTests</td><td><a href="#m3">tearDown</a></td><td rowspan="1">1715000374267</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.ecom.tests.HomePageTests</td><td><a href="#m4">testTwo</a></td><td rowspan="1">1715000374486</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.ecom.tests.LoginPageTests</td><td><a href="#m5">testOne</a></td><td rowspan="1">1715000374260</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.ecom.tests.HomePageTests#testThree</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.ecom.tests.LoginPageTests#testOne</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.ecom.tests.HomePageTests#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Propery name re is not found. Please check the config.properties
+	at com.ecom.utils.ConfigReader.getValue(ConfigReader.java:22)
+	at com.ecom.driver.DriverStarterFinisher.initDriver(DriverStarterFinisher.java:20)
+	at com.ecom.tests.BasicTests.setUp(BasicTests.java:20)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.ecom.tests.LoginPageTests#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Propery name re is not found. Please check the config.properties
+	at com.ecom.utils.ConfigReader.getValue(ConfigReader.java:22)
+	at com.ecom.driver.DriverStarterFinisher.initDriver(DriverStarterFinisher.java:20)
+	at com.ecom.tests.BasicTests.setUp(BasicTests.java:20)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.ecom.tests.HomePageTests#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.ecom.tests.LoginPageTests#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.ecom.tests.HomePageTests#testTwo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Propery name re is not found. Please check the config.properties
+	at com.ecom.utils.ConfigReader.getValue(ConfigReader.java:22)
+	at com.ecom.driver.DriverStarterFinisher.initDriver(DriverStarterFinisher.java:20)
+	at com.ecom.tests.BasicTests.setUp(BasicTests.java:20)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.ecom.tests.LoginPageTests#testOne</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Propery name re is not found. Please check the config.properties
+	at com.ecom.utils.ConfigReader.getValue(ConfigReader.java:22)
+	at com.ecom.driver.DriverStarterFinisher.initDriver(DriverStarterFinisher.java:20)
+	at com.ecom.tests.BasicTests.setUp(BasicTests.java:20)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

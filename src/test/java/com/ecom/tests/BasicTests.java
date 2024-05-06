@@ -3,21 +3,26 @@ package com.ecom.tests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.ecom.driver.DriverFactory;
+import com.ecom.driver.DriverStarterFinisher;
 
 public class BasicTests {
 	
 	protected BasicTests() {
 		
 	}
+
+	/*
+	While deveploing frame access modifiers preferences start with private. if not protected, if not default and at last the public{least priority}
+	*/
 	
 	@BeforeMethod
-	public void setUp() {
-		DriverFactory.initDriver();
+	protected void setUp() throws Exception {
+		DriverStarterFinisher.initDriver();
 	}
 	
 	@AfterMethod
-	public void tearDown() {
-		DriverFactory.quitDriver();
+	protected void tearDown() {
+		DriverStarterFinisher.quitDriver();
 	}
+
 }

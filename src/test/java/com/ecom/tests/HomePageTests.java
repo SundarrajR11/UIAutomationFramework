@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import com.ecom.driver.DriverFactory;
+import com.ecom.driver.DriverManager;
 
 public final class HomePageTests extends BasicTests {
 	
@@ -13,8 +13,8 @@ public final class HomePageTests extends BasicTests {
 	}
 	
 	@Test
-	public void testThree() {
-		DriverFactory.driver.findElement(By.xpath("//textarea[@name='q']")).sendKeys("SDET", Keys.ENTER);
+	public void testTwo() {
+		DriverManager.getDriver().findElement(By.xpath("//textarea[@name='q']")).sendKeys("SDET", Keys.ENTER);
 	}
 
 }

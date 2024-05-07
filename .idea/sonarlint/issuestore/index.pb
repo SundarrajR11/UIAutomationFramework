@@ -30,3 +30,7 @@ d
 4src/main/java/com/ecom/pages/LoginPageOrangeHRM.java,e\d\edd8a32ffecc9f9bcd3d6cd3eca4b9bd2c5b7469
 c
 3src/test/java/com/ecom/tests/OrangeHRMHomeTest.java,f\5\f506af72a8515be32b1623e110544c88af62331d
+`
+0src/main/java/com/ecom/utils/ComUtilsMethod.java,d\1\d10ef0b964bc4584d064bd89b875af6622bb3d14
+[
++src/main/java/com/ecom/pages/BasePages.java,6\7\67765594ac98bf67ab3a86343f44e8deaffba1ed

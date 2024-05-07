@@ -3,7 +3,8 @@ package com.ecom.pages;
 import com.ecom.driver.DriverManager;
 import org.openqa.selenium.By;
 
-public class LoginPageOrangeHRM {
+
+public class LoginPageOrangeHRM extends BasePages{
 
 
     private static final By textboxUserName =By.xpath("//input[@name='username' and @placeholder='Username']");
@@ -12,16 +13,20 @@ public class LoginPageOrangeHRM {
     private static final By btnLogin=By.xpath("//button[text()=' Login ']");
 
     public LoginPageOrangeHRM enterUserName(String username){
-        DriverManager.getDriver().findElement(textboxUserName).sendKeys(username);
+        sendKeys(textboxUserName,username,"visible");
         return this;
     }
     public LoginPageOrangeHRM enterPassword(String password){
-        DriverManager.getDriver().findElement(textboxPassword).sendKeys(password);
+        sendKeys(textboxPassword,password,"presence");
         return this;
     }
     public HomePageOrangeHRM clickLogin(){
-        DriverManager.getDriver().findElement(btnLogin).click();
+        click(btnLogin,"clickable");
         return new HomePageOrangeHRM();
+    }
+    public String getLoginTitle(){
+        return getPageTitle();
+
     }
 
 }

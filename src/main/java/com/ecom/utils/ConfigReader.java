@@ -28,12 +28,10 @@ public final class ConfigReader {
 			file = new FileInputStream(FrameConstants.getConfigFilePath());
 			prop.load(file);
 			for(Map.Entry<Object, Object> eMap: prop.entrySet()) {
-				CONFIG_MAP.put(String.valueOf(eMap.getKey()),String.valueOf(eMap.getValue()));
+				CONFIG_MAP.put(String.valueOf(eMap.getKey()),String.valueOf(eMap.getValue()).trim());// To remove trailing spaces and leading spaces using trim()
 			}
+
 			//prop.entrySet().forEach((entry)->CONFIG_MAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue())));{Java 8 }
-			
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 			
 		} catch (IOException e) {
 			e.printStackTrace();

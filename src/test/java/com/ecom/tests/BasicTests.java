@@ -12,7 +12,7 @@ public class BasicTests {
 	}
 
 	/*
-	While deveploing frame access modifiers preferences start with private. if not protected, if not default and at last the public{least priority}
+	While developing frame access modifiers preferences start with private. if not protected, if not default and at last the public{least priority}
 	*/
 	
 	@BeforeMethod

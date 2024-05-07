@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test thread-count="2" name="Test" parallel="methods">
     <classes>
-      <class name="com.ecom.tests.HomePageTests"/>
+      <class name="com.ecom.tests.OrangeHRMLoginTest"/>
+      <class name="com.ecom.tests.OrangeHRMHomeTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

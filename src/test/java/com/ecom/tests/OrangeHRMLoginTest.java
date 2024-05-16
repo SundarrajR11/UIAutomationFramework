@@ -1,6 +1,7 @@
 package com.ecom.tests;
 
 import com.ecom.pages.LoginPageOrangeHRM;
+import com.ecom.reports.ReportsFromExtent5;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
@@ -17,14 +18,16 @@ public final class OrangeHRMLoginTest extends BasicTests {
         loginPageOrangeHRM.enterPassword("admin123");
         loginPageOrangeHRM.clickLogin();
         Traditional way */
-
+        ReportsFromExtent5.createTests("TC01");
         // Method chaining
         // make pages class methods to return their class instance
         LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();
+
         String title=loginPageOrangeHRM.enterUserName("Admin").enterPassword("admin123").clickLogin()
                 .getHomeTitle();
         Assertions.assertThat(title)
                 .as("Title is not matching!").isEqualTo("OrangeHRM");
+
     }
 
 }

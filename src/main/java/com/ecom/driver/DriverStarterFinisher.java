@@ -20,14 +20,14 @@ public final class DriverStarterFinisher {
 		if(Objects.isNull(getDriver())) {  //driver == null
 			setDriver(new ChromeDriver());
 			getDriver().get(ConfigReader.getValue(Econfig.URL));
-			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		}
 		
 	}
 	public static void quitDriver() {
 		if(Objects.nonNull(getDriver())) { //driver != null
 			getDriver().quit();
-			unLoad();
+			unLoadDriver();
 		}
 		
 	}

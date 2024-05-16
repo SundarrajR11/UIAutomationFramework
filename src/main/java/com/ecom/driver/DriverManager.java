@@ -14,7 +14,7 @@ public final class DriverManager {
 	public static WebDriver getDriver() {
 		return driver.get();
 	}
-	public static void unLoad() {
+	public static void unLoadDriver() {
 		driver.remove();
 	}
 	

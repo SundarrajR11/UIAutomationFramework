@@ -43,7 +43,7 @@ public final class ConfigReader {
 		String key=k.toString();
 		String value=CONFIG_MAP.get(key);
 		if(Objects.isNull(value)) {
-			throw new RuntimeException("Propery name "+key+" is not found. Please check the config.properties");
+			throw new RuntimeException("Property name "+key+" is not found. Please check the config.properties");
 		}
 		return value;
 }

@@ -1,6 +1,8 @@
 package com.ecom.pages;
 
-import com.ecom.driver.DriverManager;
+import com.ecom.enums.EwaitStrategy;
+import com.ecom.reports.ReportManager;
+import com.ecom.reports.ReportsFromExtent5;
 import org.openqa.selenium.By;
 
 public final class HomePageOrangeHRM extends BasePages{
@@ -10,16 +12,17 @@ public final class HomePageOrangeHRM extends BasePages{
     private static final By linkLogout=By.linkText("Logout");
 
     public HomePageOrangeHRM clickPickerProfile(){
-        click(pickerProfile,"clickable");
+        click(pickerProfile, EwaitStrategy.CLICKABLE);
+
         return this;
     }
     public LoginPageOrangeHRM clickLogout(){
-        click(linkLogout,"clickable");
+        click(linkLogout, EwaitStrategy.CLICKABLE);
+
         return new LoginPageOrangeHRM();
     }
     public String getHomeTitle(){
+
         return getPageTitle();
     }
-
-
 }

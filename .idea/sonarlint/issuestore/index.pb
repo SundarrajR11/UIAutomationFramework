@@ -14,14 +14,6 @@ i
 :
 
 testng.xml,5\2\522a7a4e21649af06297e31a9e33f13bb4fd3022
-_
-/src/test/java/com/ecom/tests/HomePageTests.java,0\4\04cfd3603176512b946a97afcd9772f42dec39a0
-`
-0src/test/java/com/ecom/tests/LoginOrangeHRM.java,2\6\26237bddec7360864c455fbde9736896a9627f66
-d
-4src/test/java/com/ecom/tests/LoginOrangeHRMPage.java,5\a\5a831d442be07518e64b82422b2db4792b774bd5
-e
-5src/main/java/com/ecom/pages/LoginOrangeHRMPages.java,4\7\47fc7155367e3202c8b68234ba61c0072f7a9ed7
 d
 4src/test/java/com/ecom/tests/OrangeHRMLoginTest.java,4\9\4951fa7a2b196f6d8e56acb9bb24963b81bb00c9
 c
@@ -30,7 +22,17 @@ d
 4src/main/java/com/ecom/pages/LoginPageOrangeHRM.java,e\d\edd8a32ffecc9f9bcd3d6cd3eca4b9bd2c5b7469
 c
 3src/test/java/com/ecom/tests/OrangeHRMHomeTest.java,f\5\f506af72a8515be32b1623e110544c88af62331d
-`
-0src/main/java/com/ecom/utils/ComUtilsMethod.java,d\1\d10ef0b964bc4584d064bd89b875af6622bb3d14
 [
 +src/main/java/com/ecom/pages/BasePages.java,6\7\67765594ac98bf67ab3a86343f44e8deaffba1ed
+_
+/src/main/java/com/ecom/enums/EwaitStrategy.java,1\8\18318abf21caf9724280f5f8f424ad016d6b00f9
+e
+5src/main/java/com/ecom/factoryutils/ExplicitWait.java,2\2\22db1fb9bcff9def0c41dcf55c2e3c52f9131ee5
+f
+6src/main/java/com/ecom/reports/ReportsFromExtent5.java,0\0\006bcf1740ad4779dea8c667c8ce610edf029811
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+`
+0src/main/java/com/ecom/reports/xmlConfigFile.xml,1\2\123ea1a0d7de7ddbf90a07dc171ce5d43087cb12
+a
+1src/main/java/com/ecom/reports/ReportManager.java,0\9\09926287d743c0080ec08a9205fea998412bd53b

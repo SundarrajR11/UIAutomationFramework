@@ -1,7 +1,7 @@
 package com.ecom.tests;
 
 import com.ecom.pages.LoginPageOrangeHRM;
-import com.ecom.reports.ReportsFromExtent5;
+import com.ecom.reports.ExtentReport;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
@@ -11,14 +11,13 @@ public final class OrangeHRMLoginTest extends BasicTests {
     }
 
 
-    @Test
+    @Test(testName = "HC-21_TC01")
     public void loginTest(){
         /*LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();
         loginPageOrangeHRM.enterUserName("Admin");
         loginPageOrangeHRM.enterPassword("admin123");
         loginPageOrangeHRM.clickLogin();
         Traditional way */
-        ReportsFromExtent5.createTests("TC01");
         // Method chaining
         // make pages class methods to return their class instance
         LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();

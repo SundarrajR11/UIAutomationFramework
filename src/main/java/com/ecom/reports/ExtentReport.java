@@ -11,7 +11,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Objects;
 
-public final class ReportsFromExtent5 {
+public final class ExtentReport {
 
     private static ExtentReports extent;
     public static void initReports() throws IOException {

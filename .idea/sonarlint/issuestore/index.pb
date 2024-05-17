@@ -28,11 +28,15 @@ _
 /src/main/java/com/ecom/enums/EwaitStrategy.java,1\8\18318abf21caf9724280f5f8f424ad016d6b00f9
 e
 5src/main/java/com/ecom/factoryutils/ExplicitWait.java,2\2\22db1fb9bcff9def0c41dcf55c2e3c52f9131ee5
-f
-6src/main/java/com/ecom/reports/ReportsFromExtent5.java,0\0\006bcf1740ad4779dea8c667c8ce610edf029811
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 `
 0src/main/java/com/ecom/reports/xmlConfigFile.xml,1\2\123ea1a0d7de7ddbf90a07dc171ce5d43087cb12
 a
 1src/main/java/com/ecom/reports/ReportManager.java,0\9\09926287d743c0080ec08a9205fea998412bd53b
+`
+0src/main/java/com/ecom/reports/ExtentReport.java,4\e\4e11722ae64badf1f28df5c6f95b5179c027dac4
+`
+0src/main/java/com/ecom/reports/ExtentLogger.java,8\5\856288f51e6a71cc5e6b21de1ac68e1f38ec1cce
+d
+4src/main/java/com/ecom/listeners/ListenersClass.java,a\3\a376b727b76f0539f44f1e6090333e2ee9359140

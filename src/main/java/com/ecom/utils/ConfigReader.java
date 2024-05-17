@@ -39,9 +39,9 @@ public final class ConfigReader {
 		
 	}
 
-	public static String getValue(Econfig k) throws RuntimeException  {
-		String key=k.toString();
-		String value=CONFIG_MAP.get(key);
+	public static String getValue(Econfig key) throws RuntimeException  {
+		String k =key.toString();
+		String value=CONFIG_MAP.get(k);
 		if(Objects.isNull(value)) {
 			throw new RuntimeException("Property name "+key+" is not found. Please check the config.properties");
 		}

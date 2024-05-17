@@ -1,8 +1,11 @@
 package com.ecom.pages;
 
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.ecom.enums.EwaitStrategy;
+import com.ecom.reports.ExtentLogger;
+import com.ecom.reports.ExtentReport;
 import com.ecom.reports.ReportManager;
-import com.ecom.reports.ReportsFromExtent5;
 import org.openqa.selenium.By;
 
 
@@ -16,12 +19,10 @@ public class LoginPageOrangeHRM extends BasePages{
 
     public LoginPageOrangeHRM enterUserName(String username){
         sendKeys(textboxUserName,username, EwaitStrategy.VISIBLE);
-        ReportManager.getExtentTest().pass("Passed");
         return this;
     }
     public LoginPageOrangeHRM enterPassword(String password){
         sendKeys(textboxPassword,password, EwaitStrategy.PRESENCE);
-        ReportManager.getExtentTest().pass("Passed");
         return this;
     }
     public HomePageOrangeHRM clickLogin(){

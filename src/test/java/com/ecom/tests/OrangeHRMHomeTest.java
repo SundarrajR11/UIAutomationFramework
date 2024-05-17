@@ -1,7 +1,6 @@
 package com.ecom.tests;
 
 import com.ecom.pages.LoginPageOrangeHRM;
-import com.ecom.reports.ReportsFromExtent5;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
@@ -13,10 +12,10 @@ public final class OrangeHRMHomeTest extends BasicTests{
 
     }
 
-    @Test
+    @Test(testName = "HC-21_TC02")
     public void logoutTest() throws IOException {
         LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();
-        //ReportsFromExtent5.createTests("TC02");
+        //ExtentReport.createTests("TC02");
         String title=loginPageOrangeHRM.enterUserName("Admin").enterPassword("admin123").clickLogin()
                 .clickPickerProfile().clickLogout()
                 .getLoginTitle();

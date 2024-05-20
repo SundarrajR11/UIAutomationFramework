@@ -37,7 +37,7 @@ public final class FrameConstants {
 	}
 
 	private static String createTargetPath(){
-		if(ConfigReader.getValue(Econfig.OVERRIDEREPORTS).equalsIgnoreCase("NO")){
+		if(ConfigReader.getValue(Econfig.OVERRIDE_REPORTS).equalsIgnoreCase("NO")){
 			return EXTENT_FOLDER_PATH+System.currentTimeMillis()+"index.html";
 		}else {
 			return EXTENT_FOLDER_PATH+"index.html";

@@ -18,15 +18,14 @@ public class MethodInterceptor implements IMethodInterceptor {
         List<Map<String,String>>list=ExcelReader.getSheetData(FrameConstants.getRunnerSheet());
         List<IMethodInstance> result =new ArrayList<>();
 
-        for (int i = 0; i < methods.size(); i++) {
-            for (int j = 0; j < list.size(); j++) {
-                if(methods.get(i).getMethod().getMethodName().equalsIgnoreCase(list.get(j).get("Test name"))){
-                    if(list.get(j).get("Execute").equalsIgnoreCase("yes")){
-                        methods.get(i).getMethod().setDescription(list.get(j).get("Test description"));
-                        methods.get(i).getMethod().setInvocationCount( Integer.parseInt(list.get(j).get("Count")));
-                        methods.get(i).getMethod().setPriority(Integer.parseInt(list.get(j).get("Priority")));
-                        result.add(methods.get(i));
-                    }
+        for (IMethodInstance method : methods) {
+            for (Map<String, String> stringStringMap : list) {
+                if (method.getMethod().getMethodName().equalsIgnoreCase(stringStringMap.get("Test name"))
+                        && stringStringMap.get("Execute").equalsIgnoreCase("yes")) {
+                    method.getMethod().setDescription(stringStringMap.get("Test description"));
+                    method.getMethod().setInvocationCount(Integer.parseInt(stringStringMap.get("Count")));
+                    method.getMethod().setPriority(Integer.parseInt(stringStringMap.get("Priority")));
+                    result.add(method);
                 }
             }
         }

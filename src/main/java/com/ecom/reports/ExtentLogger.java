@@ -13,7 +13,7 @@ public final class ExtentLogger {
         ReportManager.getExtentTest().pass(message);
     }
         public static void pass(String message,boolean isScreenShotNeeded){
-        if(ConfigReader.getValue(Econfig.PASSEDSTEPSSCREENSHOTS).equalsIgnoreCase("YES")
+        if(ConfigReader.getValue(Econfig.PASSED_STEPSSCREENSHOTS).equalsIgnoreCase("YES")
                 && isScreenShotNeeded){
             ReportManager.getExtentTest().pass(message,
                     MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotTaker.getBase64Screenshot()).build());
@@ -26,7 +26,7 @@ public final class ExtentLogger {
         ReportManager.getExtentTest().fail(message);
     }
     public static void fail(String message,boolean isScreenShotNeeded){
-        if(ConfigReader.getValue(Econfig.FAILEDSTEPSSCREENSHOTS).equalsIgnoreCase("YES")
+        if(ConfigReader.getValue(Econfig.FAILED_STEPSSCREENSHOTS).equalsIgnoreCase("YES")
                 && isScreenShotNeeded){
             ReportManager.getExtentTest().fail(message,
                     MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotTaker.getBase64Screenshot()).build());
@@ -39,7 +39,7 @@ public final class ExtentLogger {
         ReportManager.getExtentTest().skip(message);
     }
     public static void skip(String message, boolean isScreenShotNeeded){
-        if(ConfigReader.getValue(Econfig.SKIPPEDSTEPSSCREENSHOTS).equalsIgnoreCase("YES")
+        if(ConfigReader.getValue(Econfig.SKIPPED_STEPSSCREENSHOTS).equalsIgnoreCase("YES")
                 && isScreenShotNeeded){
             ReportManager.getExtentTest().skip(message,
                     MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotTaker.getBase64Screenshot()).build());

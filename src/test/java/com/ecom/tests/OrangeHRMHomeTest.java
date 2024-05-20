@@ -1,5 +1,6 @@
 package com.ecom.tests;
 
+import com.ecom.listeners.RetryFailedTests;
 import com.ecom.pages.LoginPageOrangeHRM;
 import com.ecom.utils.DataProviderLocal;
 import org.assertj.core.api.Assertions;
@@ -14,7 +15,7 @@ public final class OrangeHRMHomeTest extends BasicTests{
 
     }
 
-    @Test(dataProvider = "getData",dataProviderClass = DataProviderLocal.class)
+    @Test
     public void logoutTest(Map<String,String> data) throws IOException {
         LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();
         String title=loginPageOrangeHRM.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin()

@@ -28,6 +28,7 @@ public final class ExtentReport {
         if (Objects.nonNull(extent)) {
             extent.flush();
         }
+        ReportManager.unloadExtentTest();
         Desktop.getDesktop().browse(new File(FrameConstants.getTargetPath()).toURI());
     }
     public static void createTests(String testcaseName){

@@ -3,6 +3,8 @@
 <suite name="Suite">
   <listeners>
     <listener class-name="com.ecom.listeners.ListenersClass"/>
+    <listener class-name="com.ecom.listeners.MethodInterceptor"/>
+    <listener class-name="com.ecom.listeners.AnnotationTransformer"/>
   </listeners>
   <test thread-count="1" name="Test" parallel="methods">
     <classes>

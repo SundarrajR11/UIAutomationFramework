@@ -3,10 +3,15 @@ package com.ecom.driver;
 import java.time.Duration;
 import java.util.Objects;
 
+import com.ecom.enums.EBrowsers;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.ecom.enums.Econfig;
 import com.ecom.utils.ConfigReader;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
 import static com.ecom.driver.DriverManager.*; // Static import done
 
 public final class DriverStarterFinisher {
@@ -16,9 +21,19 @@ public final class DriverStarterFinisher {
 	}
 	
 	
-	public static void initDriver() throws Exception {
+	public static void initDriver(String browserName) throws Exception {
 		if(Objects.isNull(getDriver())) {  //driver == null
-			setDriver(new ChromeDriver());
+			if(browserName.equalsIgnoreCase(String.valueOf(EBrowsers.CHROME))){
+				setDriver(new ChromeDriver());
+			} else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.FIREFOX))) {
+				setDriver(new FirefoxDriver());
+			} else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.EDGE))) {
+				setDriver(new EdgeDriver());
+			} else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.SAFARI))) {
+				setDriver(new SafariDriver());
+			}else {
+				throw new IllegalArgumentException("Provided browser "+browserName+" is invalid , Retry with valid browser!");
+			}
 			getDriver().get(ConfigReader.getValue(Econfig.URL));
 			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		}

@@ -1,5 +1,6 @@
 package com.ecom.tests;
 
+import com.ecom.listeners.RetryFailedTests;
 import com.ecom.pages.LoginPageOrangeHRM;
 import com.ecom.reports.ExtentReport;
 import com.ecom.utils.DataProviderLocal;
@@ -14,7 +15,7 @@ public final class OrangeHRMLoginTest extends BasicTests {
     }
 
 
-    @Test(dataProvider = "getData",dataProviderClass = DataProviderLocal.class)
+    @Test
     public void loginTest(Map<String,String> data){
         /*LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();
         loginPageOrangeHRM.enterUserName("Admin");
@@ -31,7 +32,7 @@ public final class OrangeHRMLoginTest extends BasicTests {
                 .as("Title is not matching!").isEqualTo("OrangeHRM");
 
     }
-    @Test(dataProvider = "getData",dataProviderClass = DataProviderLocal.class)
+    @Test
     public void loginTestInValid(Map<String,String> data){
         LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();
         loginPageOrangeHRM.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();

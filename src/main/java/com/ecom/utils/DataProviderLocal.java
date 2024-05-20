@@ -20,11 +20,11 @@ public final class DataProviderLocal {
         }
         List<Map<String,String>>executableData=new ArrayList<>();
 
-        for (int i = 0; i < credentialData.size(); i++) {
-            if(credentialData.get(i).get("testname").equalsIgnoreCase(testname) && credentialData.get(i).get("execute").equalsIgnoreCase("yes")){
-                    executableData.add(credentialData.get(i));
-                }
+        for (Map<String, String> credentialDatum : credentialData) {
+            if (credentialDatum.get("testname").equalsIgnoreCase(testname) && credentialDatum.get("execute").equalsIgnoreCase("yes")) {
+                executableData.add(credentialDatum);
             }
+        }
         return executableData.toArray();
     }
 }

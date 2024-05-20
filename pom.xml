@@ -8,9 +8,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<selenium-java.version>4.20.0</selenium-java.version>
-		<testng.version>7.8.0</testng.version>
+		<testng.version>7.10.2</testng.version>
 		<assertj.version>3.25.3</assertj.version>
 		<assertjTime.version>2.2.0</assertjTime.version>
+		<poi.version>5.2.5</poi.version>
+		<poi-ooxml.version>5.2.5</poi-ooxml.version>
+		<poi-ooxnl-schemas.version>4.1.2</poi-ooxnl-schemas.version>
+		<poi-scratchpad.version>5.2.5</poi-scratchpad.version>
 		<extents.version>5.1.1</extents.version>
 	</properties>
 	<dependencies>
@@ -23,7 +27,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
 		<dependency>
@@ -45,15 +49,35 @@
 			<artifactId>extentreports</artifactId>
 			<version>${extents.version}</version>
 		</dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.8.0</version>
-            <scope>compile</scope>
-        </dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi-ooxml.version}</version>
+		</dependency>
 
-    </dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>${poi-ooxnl-schemas.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>${poi-scratchpad.version}</version>
+		</dependency>
+
+	</dependencies>
     <build>
         <plugins>
             <plugin>

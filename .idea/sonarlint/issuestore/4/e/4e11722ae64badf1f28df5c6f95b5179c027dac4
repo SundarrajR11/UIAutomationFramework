@@ -1,3 +1,8 @@
 
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(©ù£¶þÿÿÿÿ8šõÄ•ø1J$bb50d295-acf7-4c4c-a5a9-f37467a4253f
+java:S1118":Add a private constructor to hide the implicit public one.(©ù£¶þÿÿÿÿ8ÜÙùÔø1J$e418c856-18ac-46ad-9572-a46c2b716268
+¼
+java:S1130"tRemove the declaration of thrown exception 'java.net.URISyntaxException', as it cannot be thrown from method's body.(îŒÑÚùÿÿÿÿ8ð„ºÖø1J$ab1dc865-6f81-42b1-a97e-6e4cc1695385
+l
+java:S1128
+")Remove this unused import 'java.net.URI'.(Ö¦¨°8õ„ºÖø1J$89583836-6e97-4799-92e0-8332775210ed

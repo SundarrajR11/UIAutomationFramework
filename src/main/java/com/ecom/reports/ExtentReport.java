@@ -17,7 +17,7 @@ public final class ExtentReport {
     public static void initReports() throws IOException {
         if (Objects.isNull(extent)) {
             extent = new ExtentReports();
-            ExtentSparkReporter spark = new ExtentSparkReporter("index.html");
+            ExtentSparkReporter spark = new ExtentSparkReporter(FrameConstants.getTargetPath());
             final File file=new File(FrameConstants.getSparkConfigXMLPath());
             spark.loadXMLConfig(file);
             extent.attachReporter(spark);
@@ -28,7 +28,7 @@ public final class ExtentReport {
         if (Objects.nonNull(extent)) {
             extent.flush();
         }
-        Desktop.getDesktop().browse(new URI("index.html"));
+        Desktop.getDesktop().browse(new File(FrameConstants.getTargetPath()).toURI());
     }
     public static void createTests(String testcaseName){
          ReportManager.setExtentTest(extent.createTest(testcaseName));

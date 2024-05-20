@@ -1,10 +1,12 @@
 package com.ecom.tests;
 
 import com.ecom.pages.LoginPageOrangeHRM;
+import com.ecom.utils.DataProviderLocal;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.Map;
 
 public final class OrangeHRMHomeTest extends BasicTests{
 
@@ -12,11 +14,10 @@ public final class OrangeHRMHomeTest extends BasicTests{
 
     }
 
-    @Test(testName = "HC-21_TC02")
-    public void logoutTest() throws IOException {
+    @Test(dataProvider = "getData",dataProviderClass = DataProviderLocal.class)
+    public void logoutTest(Map<String,String> data) throws IOException {
         LoginPageOrangeHRM loginPageOrangeHRM = new LoginPageOrangeHRM();
-        //ExtentReport.createTests("TC02");
-        String title=loginPageOrangeHRM.enterUserName("Admin").enterPassword("admin123").clickLogin()
+        String title=loginPageOrangeHRM.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin()
                 .clickPickerProfile().clickLogout()
                 .getLoginTitle();
         Assertions.assertThat(title)

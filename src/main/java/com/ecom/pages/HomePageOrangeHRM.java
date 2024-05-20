@@ -10,11 +10,11 @@ public final class HomePageOrangeHRM extends BasePages{
     private static final By linkLogout=By.linkText("Logout");
 
     public HomePageOrangeHRM clickPickerProfile(){
-        click(pickerProfile, EwaitStrategy.CLICKABLE);
+        click(pickerProfile, EwaitStrategy.CLICKABLE,"Profile Picker");
         return this;
     }
     public LoginPageOrangeHRM clickLogout(){
-        click(linkLogout, EwaitStrategy.CLICKABLE);
+        click(linkLogout, EwaitStrategy.CLICKABLE,"Logout Link");
         return new LoginPageOrangeHRM();
     }
     public String getHomeTitle(){

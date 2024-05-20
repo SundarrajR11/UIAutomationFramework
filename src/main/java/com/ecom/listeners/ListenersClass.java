@@ -10,6 +10,7 @@ import org.testng.ITestResult;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 
 public class ListenersClass implements ITestListener, ISuiteListener {
     @Override
@@ -37,17 +38,20 @@ public class ListenersClass implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ExtentLogger.pass(result.getMethod().getMethodName()+" is Passed!");
+        ExtentLogger.pass(result.getMethod().getMethodName()+" is Passed!",true);
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ExtentLogger.fail(result.getMethod().getMethodName()+" is Failed!");
+        ExtentLogger.fail(result.getMethod().getMethodName()+" is Failed!",true);
+        ExtentLogger.fail(result.getThrowable().toString());
+        ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ExtentLogger.skip(result.getMethod().getMethodName()+" is Skipped!");
+        ExtentLogger.skip(result.getMethod().getMethodName()+" is Skipped!",true);
+        ExtentLogger.skip(result.getThrowable().toString());
     }
 }
 

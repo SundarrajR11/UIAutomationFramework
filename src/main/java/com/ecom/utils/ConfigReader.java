@@ -30,7 +30,6 @@ public final class ConfigReader {
 			for(Map.Entry<Object, Object> eMap: prop.entrySet()) {
 				CONFIG_MAP.put(String.valueOf(eMap.getKey()),String.valueOf(eMap.getValue()).trim());// To remove trailing spaces and leading spaces using trim()
 			}
-
 			//prop.entrySet().forEach((entry)->CONFIG_MAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue())));{Java 8 }
 			
 		} catch (IOException e) {

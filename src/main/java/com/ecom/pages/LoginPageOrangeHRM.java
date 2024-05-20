@@ -1,11 +1,7 @@
 package com.ecom.pages;
 
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.ecom.driver.DriverManager;
 import com.ecom.enums.EwaitStrategy;
-import com.ecom.reports.ExtentLogger;
-import com.ecom.reports.ExtentReport;
-import com.ecom.reports.ReportManager;
 import org.openqa.selenium.By;
 
 
@@ -17,21 +13,25 @@ public class LoginPageOrangeHRM extends BasePages{
 
     private static final By btnLogin=By.xpath("//button[text()=' Login ']");
 
+    private static final By invalidCredentials=By.xpath("//*[@role='alert']//descendant::p[.='Invalid credentials']");
+
     public LoginPageOrangeHRM enterUserName(String username){
-        sendKeys(textboxUserName,username, EwaitStrategy.VISIBLE);
+        sendKeys(textboxUserName,username, EwaitStrategy.VISIBLE,"Username");
         return this;
     }
     public LoginPageOrangeHRM enterPassword(String password){
-        sendKeys(textboxPassword,password, EwaitStrategy.PRESENCE);
+        sendKeys(textboxPassword,password, EwaitStrategy.PRESENCE,"Password");
         return this;
     }
     public HomePageOrangeHRM clickLogin(){
-        click(btnLogin, EwaitStrategy.CLICKABLE);
+        click(btnLogin, EwaitStrategy.CLICKABLE,"Login Button");
         return new HomePageOrangeHRM();
     }
     public String getLoginTitle(){
         return getPageTitle();
 
     }
-
+    public String invalidCredential(){
+        return DriverManager.getDriver().findElement(invalidCredentials).getText();
+    }
 }

@@ -29,7 +29,7 @@ public class BasicTests {
 	protected void setUp(Object[] data) throws Exception {
 		if(ConfigReader.getValue(Econfig.CROSSBROWSER_TESTING).equalsIgnoreCase("yes")){
 			Map<String,String> map = (Map<String,String>)data[0];
-			DriverStarterFinisher.initDriver(map.get("Browser"));
+			DriverStarterFinisher.initDriver(map.get("browser"));
 		}else {
 			DriverStarterFinisher.initDriver(ConfigReader.getValue(Econfig.BROWSER));
 		}

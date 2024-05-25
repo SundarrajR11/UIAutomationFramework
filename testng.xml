@@ -8,8 +8,9 @@
   </listeners>
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
-      <class name="com.ecom.tests.OrangeHRMLoginTest"/>
-      <class name="com.ecom.tests.OrangeHRMHomeTest"/>
+      <class name="com.ecom.tests.BestSellersTest"/>
+      <class name="com.ecom.tests.NewReleaseTest"/>
+      <class name="com.ecom.tests.MoversandShakersTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

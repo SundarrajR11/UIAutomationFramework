@@ -29,6 +29,10 @@ public class BasePages {
     protected String getPageTitle(){
         return DriverManager.getDriver().getTitle();
     }
-
+    protected String getText(By by,EwaitStrategy waitStrategy, String elementName){
+        WebElement element = ExplicitWait.performExplicitWait(waitStrategy, by);
+        ExtentLogger.pass(elementName+"Text retrieved successfully");
+        return element.getText();
+    }
 
 }

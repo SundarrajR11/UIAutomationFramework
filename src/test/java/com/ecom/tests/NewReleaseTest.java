@@ -1,5 +1,9 @@
 package com.ecom.tests;
 
+import com.ecom.annotations.FrameworkAnnotations;
+import com.ecom.enums.EAuthors;
+import com.ecom.enums.ECategories;
+import com.ecom.enums.EDevices;
 import com.ecom.pages.AmazonHomePage;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
@@ -11,6 +15,7 @@ public final class NewReleaseTest extends BasicTests {
     private NewReleaseTest(){
 
     }
+    @FrameworkAnnotations(authors = EAuthors.DEAVYANI,categories = ECategories.SMOKE,devices = EDevices.DESKTOP)
     @Test
     public void newReleaseTest(Map<String,String> data){
 

@@ -2,6 +2,9 @@ package com.ecom.reports;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.ecom.enums.EAuthors;
+import com.ecom.enums.ECategories;
+import com.ecom.enums.EDevices;
 import com.ecom.frameconstants.FrameConstants;
 
 import java.awt.*;
@@ -33,5 +36,21 @@ public final class ExtentReport {
     }
     public static void createTests(String testcaseName){
          ReportManager.setExtentTest(extent.createTest(testcaseName));
+    }
+
+    public static void addAuthors(EAuthors[] authors){
+        for (EAuthors author: authors) {
+            ReportManager.getExtentTest().assignAuthor(author.toString());
+        }
+    }
+    public static void addCategories(ECategories[] categories){
+        for (ECategories category : categories){
+            ReportManager.getExtentTest().assignCategory(category.toString());
+        }
+    }
+    public static void addDevice(EDevices[] devices){
+        for (EDevices device : devices){
+            ReportManager.getExtentTest().assignDevice(device.toString());
+        }
     }
 }

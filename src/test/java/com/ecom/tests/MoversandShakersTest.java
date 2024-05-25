@@ -1,5 +1,9 @@
 package com.ecom.tests;
 
+import com.ecom.annotations.FrameworkAnnotations;
+import com.ecom.enums.EAuthors;
+import com.ecom.enums.ECategories;
+import com.ecom.enums.EDevices;
 import com.ecom.pages.AmazonHomePage;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
@@ -10,6 +14,7 @@ public final class MoversandShakersTest extends BasicTests{
     private MoversandShakersTest(){
 
     }
+    @FrameworkAnnotations(authors = EAuthors.SUNDARRAJ,categories = ECategories.REGRESSION,devices = EDevices.WEB)
     @Test
     public void moversandShakersTest(Map<String,String> data){
 

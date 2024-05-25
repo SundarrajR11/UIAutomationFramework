@@ -82,3 +82,17 @@ l
 <src/main/java/com/ecom/pages/AmazonMoversandShakersPage.java,f\f\ffc73b9af2533e3710f6c360685c859a2a627fad
 l
 <src/main/java/com/ecom/pages/AmazonMoversAndShakersPage.java,a\3\a31e40f1282f3366419257a14548b143e9b6d1be
+`
+0src/main/java/com/ecom/FrameworkAnnotations.java,b\d\bdbaf1ff078031f719d16299a000ff9af5413234
+l
+<src/main/java/com/ecom/annotations/FrameworkAnnotations.java,8\f\8f97fc85aebd47b6a82f5573d9fd49945bdb75a4
+U
+%src/main/java/com/ecom/enums/Ean.java,9\b\9be9f54469ba714cc31273ee202521a59fa7b027
+^
+.src/main/java/com/ecom/enums/EAnnotations.java,0\9\09b9d8b34615b889bf72c04c9fbe55621dfe277b
+Z
+*src/main/java/com/ecom/enums/EAuthors.java,4\1\415441439650234a18a6b872af79e0e0d10363b6
+]
+-src/main/java/com/ecom/enums/ECategories.java,b\a\ba7ec5af09f9dfeb61b5aca48d7fae8ab8ba6f1c
+Z
+*src/main/java/com/ecom/enums/EDevices.java,f\f\ffea28691d2f20a8d383e84ccbebab26e1bedb5e

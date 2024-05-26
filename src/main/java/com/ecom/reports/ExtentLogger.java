@@ -12,7 +12,7 @@ public final class ExtentLogger {
     public static void pass(String message){
         ReportManager.getExtentTest().pass(message);
     }
-        public static void pass(String message,boolean isScreenShotNeeded){
+    public static void pass(String message,boolean isScreenShotNeeded){
         if(ConfigReader.getValue(Econfig.PASSED_STEPSSCREENSHOTS).equalsIgnoreCase("YES")
                 && isScreenShotNeeded){
             ReportManager.getExtentTest().pass(message,

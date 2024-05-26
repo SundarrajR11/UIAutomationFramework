@@ -1,3 +1,9 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Æ‹ÿú1J$639f0bfa-13d1-46ea-ba2e-dbc7a07a8279
-	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Æ‹ÿú1J$826729f6-96b0-4f2e-b3e3-21fecf19fe62
+l
+java:S1128"JRemove this unused import 'com.ecom.exceptions.InValidSparkConfigXMLPath'.(ÈÆ«ûüÿÿÿÿ8‡¿„¡û1
+X
+java:S1128";Remove this unused import 'com.ecom.reports.ReportManager'.(†Ï†ß8‡¿„¡û1
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8‡¿„¡û1
+Z
+java:S1128"8Remove this unused import 'java.net.URISyntaxException'.(Ä®íÿÿÿÿÿ8‡¿„¡û1

@@ -1,6 +1,6 @@
 package com.ecom.listeners;
 
-import com.ecom.frameconstants.FrameConstants;
+import com.ecom.constants.FrameConstants;
 import com.ecom.utils.ExcelReader;
 import org.testng.IMethodInstance;
 import org.testng.IMethodInterceptor;

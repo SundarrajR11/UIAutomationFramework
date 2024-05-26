@@ -1,0 +1,14 @@
+# Build directories
+target/
+
+# IDE_IntelliJ IDEA/Eclipse and editor files
+.idea/
+*.iws
+*.iml
+*.ipr
+.project
+.classpath
+/.settings/
+
+# Reports and test results
+/test-output/

@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.Objects;
 
 import com.ecom.enums.EBrowsers;
+import com.ecom.exceptions.InValidBrowserEnteredException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.ecom.enums.Econfig;
@@ -21,7 +22,7 @@ public final class DriverStarterFinisher {
 	}
 	
 	
-	public static void initDriver(String browserName) throws Exception {
+	public static void initDriver(String browserName){
 		if(Objects.isNull(getDriver())) {  //driver == null
 			if(browserName.equalsIgnoreCase(String.valueOf(EBrowsers.CHROME))){
 				setDriver(new ChromeDriver());
@@ -32,7 +33,7 @@ public final class DriverStarterFinisher {
 			} else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.SAFARI))) {
 				setDriver(new SafariDriver());
 			}else {
-				throw new IllegalArgumentException("Provided browser "+browserName+" is invalid , Retry with valid browser!");
+				throw new InValidBrowserEnteredException("Provided browser "+browserName+" is invalid , Retry with valid browser!");
 			}
 			getDriver().get(ConfigReader.getValue(Econfig.URL));
 			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));

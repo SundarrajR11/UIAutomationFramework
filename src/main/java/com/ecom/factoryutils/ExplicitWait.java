@@ -1,8 +1,7 @@
 package com.ecom.factoryutils;
 
-import com.ecom.driver.DriverManager;
 import com.ecom.enums.EwaitStrategy;
-import com.ecom.frameconstants.FrameConstants;
+import com.ecom.constants.FrameConstants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

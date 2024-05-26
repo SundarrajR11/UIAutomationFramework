@@ -1,5 +1,5 @@
 # Build directories
-/target/
+target/
 
 # IDE_IntelliJ IDEA/Eclipse and editor files
 .idea/
@@ -11,6 +11,6 @@
 /.settings/
 
 # Reports and test results
-/test-output/
-/extent-test-output/
+test-output/
+extent-test-output/
 

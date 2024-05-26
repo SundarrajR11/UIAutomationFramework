@@ -15,7 +15,7 @@ public final class NewReleaseTest extends BasicTests {
     private NewReleaseTest(){
 
     }
-    @FrameworkAnnotations(authors = EAuthors.DEAVYANI,categories = ECategories.SMOKE,devices = EDevices.DESKTOP)
+    @FrameworkAnnotations(authors = EAuthors.DEVAYANI,categories = ECategories.SMOKE,devices = EDevices.DESKTOP)
     @Test
     public void newReleaseTest(Map<String,String> data){
 

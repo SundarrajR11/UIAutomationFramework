@@ -13,7 +13,7 @@ import java.util.Map;
 public final class BestSellersTest extends BasicTests {
     private BestSellersTest(){}
 
-    @FrameworkAnnotations(authors = {EAuthors.SUNDARRAJ,EAuthors.DEAVYANI},categories = ECategories.SANITY,devices = EDevices.MOBILE)
+    @FrameworkAnnotations(authors = {EAuthors.SUNDARRAJ,EAuthors.MEENAKSHI,EAuthors.RAGUNATHAN,EAuthors.DEVAYANI},categories = ECategories.SANITY,devices = EDevices.MOBILE)
     @Test
     public void bestSellersTest(Map<String,String> data){
         AmazonHomePage amazonHomePage = new AmazonHomePage();

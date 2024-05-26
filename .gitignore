@@ -12,3 +12,5 @@ target/
 
 # Reports and test results
 /test-output/
+/extent-test-output/
+

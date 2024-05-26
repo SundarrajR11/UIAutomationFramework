@@ -1,5 +1,5 @@
 # Build directories
-target/
+/target/
 
 # IDE_IntelliJ IDEA/Eclipse and editor files
 .idea/

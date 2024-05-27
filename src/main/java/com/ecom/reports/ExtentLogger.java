@@ -25,6 +25,9 @@ public final class ExtentLogger {
     public static void fail(String message){
         ReportManager.getExtentTest().fail(message);
     }
+    public static void fail(Throwable cause){
+        ReportManager.getExtentTest().fail(cause);
+    }
     public static void fail(String message,boolean isScreenShotNeeded){
         if(ConfigReader.getValue(Econfig.FAILED_STEPSSCREENSHOTS).equalsIgnoreCase("YES")
                 && isScreenShotNeeded){

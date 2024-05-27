@@ -3,6 +3,7 @@ package com.ecom.enums;
 public enum Econfig {
 	URL,
 	BROWSER,
+	REPORT_THEME,
 	OVERRIDE_REPORTS,
 	PASSED_STEPSSCREENSHOTS,
 	FAILED_STEPSSCREENSHOTS,

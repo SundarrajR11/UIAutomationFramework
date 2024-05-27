@@ -6,8 +6,10 @@ import com.ecom.constants.FrameConstants;
 import com.ecom.enums.EAuthors;
 import com.ecom.enums.ECategories;
 import com.ecom.enums.EDevices;
-import com.ecom.exceptions.InValidSparkConfigXMLPath;
+import com.ecom.enums.Econfig;
+import com.ecom.exceptions.InValidSparkConfigJsonPath;
 import com.ecom.exceptions.UnableToLoadFileInBrowser;
+import com.ecom.utils.ConfigReader;
 
 import java.awt.*;
 import java.io.File;
@@ -18,15 +20,18 @@ public final class ExtentReport {
 
     private ExtentReport(){}
     private static ExtentReports extent;
-    public static void initReports() {
+    public static void initReports() throws IOException {
         if (Objects.isNull(extent)) {
             extent = new ExtentReports();
             ExtentSparkReporter spark = new ExtentSparkReporter(FrameConstants.getTargetPath());
-            String sparkConfigXMLPath=FrameConstants.getSparkConfigXMLPath();
-            try {
-                spark.loadXMLConfig(sparkConfigXMLPath);// it can accept both String or File
-            }catch (IOException e){
-                throw  new InValidSparkConfigXMLPath("Please check the provided XML file path",e);
+
+            if(ConfigReader.getValue(Econfig.REPORT_THEME).equalsIgnoreCase("Yes")){
+                final File sparkConfigJsonPath=new File(FrameConstants.getSparkConfigJsonPath());
+                spark.loadJSONConfig(sparkConfigJsonPath);
+            }
+            else {
+                final File sparkConfigXMLPath=new File(FrameConstants.getSparkConfigXMLPath());
+                spark.loadXMLConfig(sparkConfigXMLPath);
             }
             extent.attachReporter(spark);
         }

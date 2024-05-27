@@ -26,28 +26,21 @@
         <thumbnailForBase64>false</thumbnailForBase64>
 
         <!-- title of the document -->
-        <documentTitle>E-Commerce</documentTitle>
+        <documentTitle>Amazon Automation Reports</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>SIT Report</reportName>
+        <reportName>Amazon_SIT_Report</reportName>
 
         <!-- timestamp format -->
         <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
 
         <!-- custom javascript -->
         <js>
-            <![CDATA[
-        $(document).ready(function() {
 
-        });
-      ]]>
         </js>
-
         <!-- custom styles -->
         <css>
-            <![CDATA[
 
-      ]]>
         </css>
 
     </configuration>

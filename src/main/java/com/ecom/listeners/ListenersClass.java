@@ -22,7 +22,11 @@ import java.util.Arrays;
 public class ListenersClass implements ITestListener, ISuiteListener {
     @Override
     public void onStart(ISuite suite) {
-        ExtentReport.initReports();
+        try {
+            ExtentReport.initReports();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -49,7 +53,7 @@ public class ListenersClass implements ITestListener, ISuiteListener {
     @Override
     public void onTestFailure(ITestResult result) {
         ExtentLogger.fail(result.getMethod().getMethodName()+" is Failed!",true);
-        ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
+        ExtentLogger.fail(result.getThrowable());
     }
 
     @Override

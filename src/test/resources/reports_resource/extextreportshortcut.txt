@@ -1,0 +1,18 @@
+
+Filter by Status:
+
+p: Shows only Passed test cases.
+f: Shows only Failed test cases.
+s: Shows only Skipped test cases.
+w: Shows only Warning test cases (Not presented in our framework).
+Esc: Clears any applied filter and shows all test cases.
+
+Jump to Tabs:
+t: Jumps to the Tests tab.
+c: Jumps to the Categories tab (if you are using categories).
+d: Jumps to the Dashboard tab.
+x: Jumps to the Exceptions tab
+
+Change Theme:
+l: Toggles between Light and Dark theme.
+

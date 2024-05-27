@@ -5,6 +5,7 @@ import com.ecom.annotations.FrameworkAnnotations;
 import com.ecom.enums.EAuthors;
 import com.ecom.enums.ECategories;
 import com.ecom.enums.EDevices;
+import com.ecom.exceptions.InValidSparkConfigPathException;
 import com.ecom.reports.ExtentLogger;
 import com.ecom.reports.ExtentReport;
 import org.testng.ISuite;
@@ -20,7 +21,7 @@ public class ListenersClass implements ITestListener, ISuiteListener {
         try {
             ExtentReport.initReports();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new InValidSparkConfigPathException("Please check the paths of spark-config.json/xml file!");
         }
     }
 

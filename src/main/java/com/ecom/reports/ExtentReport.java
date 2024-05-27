@@ -7,8 +7,7 @@ import com.ecom.enums.EAuthors;
 import com.ecom.enums.ECategories;
 import com.ecom.enums.EDevices;
 import com.ecom.enums.Econfig;
-import com.ecom.exceptions.InValidSparkConfigJsonPath;
-import com.ecom.exceptions.UnableToLoadFileInBrowser;
+import com.ecom.exceptions.UnableToLoadFileInBrowserException;
 import com.ecom.utils.ConfigReader;
 
 import java.awt.*;
@@ -45,7 +44,7 @@ public final class ExtentReport {
         try {
             Desktop.getDesktop().browse(new File(FrameConstants.getTargetPath()).toURI());
         } catch (IOException e) {
-            throw new UnableToLoadFileInBrowser("Please verify the url is null free or invalid path and/or verify whether browser supports desktop action",e);
+            throw new UnableToLoadFileInBrowserException("Please verify the url is null free or invalid path and/or verify whether browser supports desktop action",e);
         }
     }
     public static void createTests(String testcaseName){

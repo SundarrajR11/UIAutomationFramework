@@ -5,19 +5,14 @@ import com.ecom.annotations.FrameworkAnnotations;
 import com.ecom.enums.EAuthors;
 import com.ecom.enums.ECategories;
 import com.ecom.enums.EDevices;
-import com.ecom.exceptions.InValidSparkConfigXMLPath;
 import com.ecom.reports.ExtentLogger;
 import com.ecom.reports.ExtentReport;
-import com.ecom.reports.ReportManager;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.URISyntaxException;
-import java.util.Arrays;
 
 public class ListenersClass implements ITestListener, ISuiteListener {
     @Override

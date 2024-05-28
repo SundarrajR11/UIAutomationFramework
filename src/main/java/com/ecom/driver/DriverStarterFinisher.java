@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import com.ecom.enums.EBrowsers;
 import com.ecom.exceptions.InValidBrowserEnteredException;
+import com.ecom.reports.ExtentSystemInfo;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.ecom.enums.Econfig;
@@ -35,6 +36,7 @@ public final class DriverStarterFinisher {
 			}else {
 				throw new InValidBrowserEnteredException("Provided browser "+browserName+" is invalid , Retry with valid browser!");
 			}
+
 			getDriver().get(ConfigReader.getValue(Econfig.URL));
 			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		}

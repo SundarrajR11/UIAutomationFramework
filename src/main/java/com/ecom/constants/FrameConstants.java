@@ -11,8 +11,8 @@ public final class FrameConstants {
 	private static final String USER_DIR=System.getProperty("user.dir");
 	private static final String CONFIG_PATH= USER_DIR+ "/src/test/resources/config/config.properties";
 	private static final int EXPLICIT_WAIT=20;
-	private static final String SPARK_CONFIG_XML_PATH = USER_DIR+"/src/test/resources/reports_resource/spark-config.xml";
-	private static final String SPARK_CONFIG_JSON_PATH=USER_DIR+"/src/test/resources/reports_resource/spark-config.json";
+	private static final String SPARK_CONFIG_XML_PATH = USER_DIR+"/src/main/resources/reports_config/spark-config.xml";
+	private static final String SPARK_CONFIG_JSON_PATH=USER_DIR+"/src/main/resources/reports_config/spark-config.json";
 	private static final String EXTENT_FOLDER_PATH= USER_DIR+"/extent-test-output/";
 	private static String excelFilePath ="";
 	private static final String EXCEL_PATH=USER_DIR+"/src/test/resources/excel/testdata.xlsx";

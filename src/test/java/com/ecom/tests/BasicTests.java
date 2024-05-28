@@ -2,6 +2,7 @@ package com.ecom.tests;
 
 import com.ecom.enums.Econfig;
 import com.ecom.reports.ExtentReport;
+import com.ecom.reports.ExtentSystemInfo;
 import com.ecom.utils.ConfigReader;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -33,7 +34,6 @@ public class BasicTests {
 		}else {
 			DriverStarterFinisher.initDriver(ConfigReader.getValue(Econfig.BROWSER));
 		}
-
 	}
 	
 	@AfterMethod

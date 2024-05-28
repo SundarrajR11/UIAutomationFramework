@@ -29,10 +29,14 @@
         <documentTitle>Amazon Automation Reports</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>Amazon_SIT_Report</reportName>
+        <reportName><![CDATA[
+     <img src='C:\Users\ragus\IdeaProjects\E-CommerceOpenSource\src\main\resources\reports_config\logo.jpg'/>
+      ]]></reportName>
 
         <!-- timestamp format -->
         <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+
+
 
         <!-- custom javascript -->
         <js>

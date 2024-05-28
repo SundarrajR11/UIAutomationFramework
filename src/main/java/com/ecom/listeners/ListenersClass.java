@@ -18,11 +18,7 @@ import java.io.IOException;
 public class ListenersClass implements ITestListener, ISuiteListener {
     @Override
     public void onStart(ISuite suite) {
-        try {
-            ExtentReport.initReports();
-        } catch (IOException e) {
-            throw new InValidSparkConfigPathException("Please check the paths of spark-config.json/xml file!");
-        }
+        ExtentReport.initReports();
     }
 
     @Override

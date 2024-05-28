@@ -9,10 +9,10 @@ Esc: Clears any applied filter and shows all test cases.
 
 Jump to Tabs:
 t: Jumps to the Tests tab.
-c: Jumps to the Categories tab (if you are using categories).
+c: Jumps to the Categories tab.
 d: Jumps to the Dashboard tab.
 x: Jumps to the Exceptions tab
 
 Change Theme:
-l: Toggles between Light and Dark theme.
+l: Toggles between Standard and Dark theme.
 

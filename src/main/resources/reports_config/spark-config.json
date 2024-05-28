@@ -6,8 +6,8 @@
   "offlineMode": false,
   "thumbnailForBase64": false,
   "documentTitle": "Amazon Automation Reports",
-  "reportName": "Amazon_SIT_Report",
+  "reportName": "<img src='C:/Users/ragus/IdeaProjects/E-CommerceOpenSource/src/main/resources/reports_config/logo.jpg' alt='Logo' style='width: 90px; height: auto;'>",
   "timeStampFormat": "MMM dd, yyyy HH:mm:ss a",
   "js": "",
-  "css": ""
+  "css": ".badge-primary{background-color: transparent};"
 }

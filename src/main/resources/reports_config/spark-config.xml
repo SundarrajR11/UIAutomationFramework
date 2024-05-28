@@ -35,16 +35,11 @@
 
         <!-- timestamp format -->
         <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
-
-
-
-        <!-- custom javascript -->
         <js>
 
         </js>
-        <!-- custom styles -->
         <css>
-
+            .badge-primary{background-color:transparent;}
         </css>
 
     </configuration>

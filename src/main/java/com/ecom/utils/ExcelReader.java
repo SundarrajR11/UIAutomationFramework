@@ -15,7 +15,6 @@ public final class ExcelReader {
     }
     public static List<Map<String,String>> getSheetData(String sheetName) {
         ArrayList<Map<String,String>> list =null;
-
         // Use Try with resources when variable class implements AutoCloseable interface
         // Hence need to close using finally block
 

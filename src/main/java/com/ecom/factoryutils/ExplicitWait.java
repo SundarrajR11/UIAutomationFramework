@@ -2,6 +2,7 @@ package com.ecom.factoryutils;
 
 import com.ecom.enums.EwaitStrategy;
 import com.ecom.constants.FrameConstants;
+import com.ecom.exceptions.InValidWaitStrategyException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -36,7 +37,7 @@ public final class ExplicitWait {
                 return getDriver().findElement(by);
             }
             default:{
-                throw new IllegalArgumentException("Unexpected value: " + ewaitStrategy);
+                throw new InValidWaitStrategyException("Unexpected value: " + ewaitStrategy);
             }
         }
 

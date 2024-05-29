@@ -6,11 +6,11 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class RetryFailedTests implements IRetryAnalyzer {
-    int count =0;
-    int retries=1;
+    private int count =0;
+    private static final int RETRIES =1;
     @Override
     public boolean retry(ITestResult result) {
-        if(count<retries && ConfigReader.getValue(Econfig.RETRY_FAILED_TESTS).equalsIgnoreCase("Yes")){
+        if(count< RETRIES && ConfigReader.getValue(Econfig.RETRY_FAILED_TESTS).equalsIgnoreCase("Yes")){
             count++;
             return true;
         }

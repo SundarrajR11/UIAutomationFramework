@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class MethodInterceptor implements IMethodInterceptor {
 
+
     @Override
     public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext context) {
 

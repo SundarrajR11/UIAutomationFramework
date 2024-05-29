@@ -27,7 +27,7 @@ public class BasicTests {
 	*/
 	@SuppressWarnings("unchecked")
 	@BeforeMethod
-	protected void setUp(Object[] data) throws Exception {
+	protected void setUp(Object[] data){
 		if(ConfigReader.getValue(Econfig.CROSSBROWSER_TESTING).equalsIgnoreCase("yes")){
 			Map<String,String> map = (Map<String,String>)data[0];
 			DriverStarterFinisher.initDriver(map.get("browser"));

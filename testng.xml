@@ -9,8 +9,8 @@
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
       <class name="com.ecom.tests.BestSellersTest"/>
-    <!--  <class name="com.ecom.tests.NewReleaseTest"/>
-      <class name="com.ecom.tests.MoversandShakersTest"/>-->
+      <class name="com.ecom.tests.NewReleaseTest"/>
+      <class name="com.ecom.tests.MoversandShakersTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

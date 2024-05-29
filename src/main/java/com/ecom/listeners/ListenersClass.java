@@ -28,7 +28,7 @@ public class ListenersClass implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        ExtentReport.createTests(result.getMethod().getMethodName());
+        ExtentReport.createTests(result.getMethod().getMethodName(),result.getMethod().getDescription());
         EAuthors[] authors=result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotations.class).authors();
         ExtentReport.addAuthors(authors);
         ECategories[] categories=result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotations.class).categories();

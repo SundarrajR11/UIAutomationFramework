@@ -41,8 +41,8 @@ public final class ExtentReport {
             throw new UnableToLoadFileInBrowserException("Please verify the url is null free or invalid path and/or verify whether browser supports desktop action",e);
         }
     }
-    public static void createTests(String testcaseName){
-         ReportManager.setExtentTest(extent.createTest(testcaseName));
+    public static void createTests(String testcaseName,String description){
+         ReportManager.setExtentTest(extent.createTest(testcaseName,description));
     }
 
     public static void addAuthors(EAuthors[] authors){

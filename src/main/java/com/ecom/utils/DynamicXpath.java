@@ -1,4 +1,4 @@
-package com.ecom.factoryutils;
+package com.ecom.utils;
 
 public final class DynamicXpath {
     private DynamicXpath(){

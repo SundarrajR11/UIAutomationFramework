@@ -1,7 +1,7 @@
 package com.ecom.pages;
 
 import com.ecom.enums.EwaitStrategy;
-import com.ecom.factoryutils.DynamicXpath;
+import com.ecom.utils.DynamicXpath;
 import org.openqa.selenium.By;
 
 public final class AmazonHumBugerMenuPage extends BasePages{

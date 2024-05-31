@@ -12,9 +12,9 @@ import java.time.Duration;
 
 import static com.ecom.driver.DriverManager.getDriver;
 
-public final class ExplicitWait {
+public final class WaitFactory {
 
-    private ExplicitWait(){
+    private WaitFactory(){
 
     }
     public static WebElement performExplicitWait(EwaitStrategy ewaitStrategy, By by){
@@ -23,7 +23,6 @@ public final class ExplicitWait {
             case CLICKABLE:{
                 return new WebDriverWait(getDriver(), Duration.ofSeconds(FrameConstants.getExplicitWait()))
                         .until(ExpectedConditions.elementToBeClickable(by));
-
             }
             case PRESENCE:{
                 return new WebDriverWait(getDriver(), Duration.ofSeconds(FrameConstants.getExplicitWait()))

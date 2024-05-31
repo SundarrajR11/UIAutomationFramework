@@ -8,13 +8,13 @@ public final class DriverManager {
 	}
 	private static final ThreadLocal<WebDriver> driver=new ThreadLocal<>();
 	
-	 static void setDriver(WebDriver driverRef) {
+	 public static void setDriver(WebDriver driverRef) {
 		driver.set(driverRef);
 	}
 	 public static WebDriver getDriver() {
 		return driver.get();
 	}
-	 static void unLoadDriver() {
+	 public static void unLoadDriver() {
 		driver.remove();
 	}
 	

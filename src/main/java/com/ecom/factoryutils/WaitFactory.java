@@ -19,25 +19,23 @@ public final class WaitFactory {
     }
     public static WebElement performExplicitWait(EwaitStrategy ewaitStrategy, By by){
 
-        switch (ewaitStrategy){
-            case CLICKABLE:{
+        switch (ewaitStrategy) {
+            case CLICKABLE -> {
                 return new WebDriverWait(getDriver(), Duration.ofSeconds(FrameConstants.getExplicitWait()))
                         .until(ExpectedConditions.elementToBeClickable(by));
             }
-            case PRESENCE:{
+            case PRESENCE -> {
                 return new WebDriverWait(getDriver(), Duration.ofSeconds(FrameConstants.getExplicitWait()))
                         .until(ExpectedConditions.presenceOfElementLocated(by));
             }
-            case VISIBLE:{
+            case VISIBLE -> {
                 return new WebDriverWait(getDriver(), Duration.ofSeconds(FrameConstants.getExplicitWait()))
                         .until(ExpectedConditions.visibilityOfElementLocated(by));
             }
-            case NONE:{
+            case NONE -> {
                 return getDriver().findElement(by);
             }
-            default:{
-                throw new InValidWaitStrategyException("Unexpected value: " + ewaitStrategy);
-            }
+            default -> throw new InValidWaitStrategyException("Unexpected value: " + ewaitStrategy);
         }
 
     }

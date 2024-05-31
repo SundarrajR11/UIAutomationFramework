@@ -21,7 +21,7 @@ public final class DriverFactory {
             }else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.SAFARI))) {
               driver= new SafariDriver();
             }else {
-                throw new InValidBrowserEnteredException("Provided browser " + browserName + " is invalid , Retry with valid browser!");
+                throw new InValidBrowserEnteredException("Provided browser " + browserName + " is invalid,Retry with valid browser!");
             }
         return driver;
     }

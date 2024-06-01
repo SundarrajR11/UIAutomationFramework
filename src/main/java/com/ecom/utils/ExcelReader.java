@@ -10,10 +10,10 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * Utility class for reading data from Excel sheets.
+ * ExcelReader class for reading data from Excel sheets.
  *
  * <p>This class provides a method to read data from a specified Excel sheet and return it as a list of maps,
- * where each map represents a row with column names as keys.</p>
+ * where each map represents a row,with column headers as keys and cell values as values.</p>
  *
  * <p>Example usage:</p>
  * <pre>

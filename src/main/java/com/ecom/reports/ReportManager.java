@@ -13,7 +13,7 @@ import com.aventstack.extentreports.ExtentTest;
  * {@code
  * ExtentTest test = extent.createTest("Test Name");
  * ReportManager.setExtentTest(test);
- * ReportManager.getExtentTest().log(Status.PASS, "Test Passed");
+ * ReportManager.getExtentTest().pass("Passed!");
  * ReportManager.unloadExtentTest();
  * }
  * </pre>
@@ -43,10 +43,10 @@ public final class ReportManager {
     /**
      * Sets the {@link ExtentTest} instance for the current thread.
      *
-     * @param refextentTest the {@link ExtentTest} instance to be set for the current thread.
+     * @param refExtentTest the {@link ExtentTest} instance to be set for the current thread.
      */
-    static void setExtentTest(ExtentTest refextentTest) {
-        extentTest.set(refextentTest);
+    static void setExtentTest(ExtentTest refExtentTest) {
+        extentTest.set(refExtentTest);
     }
 
     /**

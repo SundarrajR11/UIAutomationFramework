@@ -10,6 +10,9 @@ target/
 .classpath
 /.settings/
 
+# Java Documentation
+doc/
+
 # Reports and test results
 test-output/
 extent-test-output/

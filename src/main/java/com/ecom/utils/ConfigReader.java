@@ -1,3 +1,8 @@
+/**
+ *This package contains various utility classes that provide common
+ *  functionalities such as reading configuration properties, reading Excel files,
+ *  taking screenshots, and handling dynamic XPaths etc.
+ */
 package com.ecom.utils;
 
 import java.io.FileInputStream;
@@ -12,7 +17,7 @@ import com.ecom.constants.FrameConstants;
 import com.ecom.exceptions.InValidPropertyKeyException;
 
 /**
- * Utility class for reading configuration properties.
+ * ConfigReader class for reading configuration properties.
  *
  * <p>This class provides methods to read key-value pairs from a configuration file. The properties
  * are loaded into a map at the time of class loading, and the values can be retrieved using the
@@ -35,7 +40,6 @@ public final class ConfigReader {
 	 */
 	private ConfigReader() {
 	}
-
 	/**
 	 * Properties object to hold the properties loaded from the configuration file.
 	 */

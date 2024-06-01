@@ -1,7 +1,7 @@
 package com.ecom.utils;
 
 /**
- * Utility class for generating dynamic XPath expressions.
+ * DynamicXpath class for generating dynamic XPath expressions.
  *
  * <p>This class provides a method to create dynamic XPath expressions by replacing
  * placeholders in a base XPath with specific values.</p>

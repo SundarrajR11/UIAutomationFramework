@@ -1,3 +1,6 @@
+/**
+ * Provides classes for generating and managing reports.
+ */
 package com.ecom.reports;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -6,7 +9,7 @@ import com.ecom.utils.ConfigReader;
 import com.ecom.utils.ScreenshotTaker;
 
 /**
- * Utility class for logging messages to the Extent Reports.
+ * ExtentLogger class for logging messages to the Extent Reports.
  *
  * <p>This class provides methods for logging different statuses (pass, fail, skip) to the Extent Reports.
  * It also supports capturing screenshots for the log entries if configured to do so.</p>

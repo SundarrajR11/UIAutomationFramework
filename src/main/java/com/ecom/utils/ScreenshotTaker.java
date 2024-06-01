@@ -5,7 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 /**
- * Utility class for taking screenshots in Base64 format.
+ * ScreenShotTaker class for taking screenshots in Base64 format.
  *
  * <p>This class provides a method to capture a screenshot of the current browser window
  * and return it as a Base64 encoded string. This can be useful for embedding screenshots

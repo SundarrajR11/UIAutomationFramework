@@ -71,6 +71,12 @@ public final class FrameConstants {
 	private static String excelFilePath = "";
 
 	/**
+	 * URL of the remote host.
+	 */
+	private static final String RUN_MODE_URL = "http://localhost:4444/";
+
+
+	/**
 	 * Retrieves the path to the configuration properties file.
 	 *
 	 * @return the configuration file path as a string.
@@ -160,5 +166,14 @@ public final class FrameConstants {
 	 */
 	public static String getCredentialSheet() {
 		return CREDENTIAL_SHEET;
+	}
+
+	/**
+	 * Retrieves the URL of th the remote host.
+	 *
+	 * @return the URL of the remote host as a string.
+	 */
+	public static String getRunModeUrl() {
+		return RUN_MODE_URL;
 	}
 }

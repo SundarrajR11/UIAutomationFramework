@@ -1,5 +1,6 @@
 package com.ecom.driver;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.Objects;
 
@@ -37,7 +38,11 @@ public final class DriverStarterFinisher {
 	 */
 	public static void initDriver(String browserName) {
 		if (Objects.isNull(getDriver())) {
-			setDriver(DriverFactory.getDriverInstance(browserName));
+			try {
+				setDriver(DriverFactory.getDriverInstance(browserName));
+			} catch (MalformedURLException e) {
+				throw new RuntimeException(e);
+			}
 		}
 		getDriver().get(ConfigReader.getValue(Econfig.URL));
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));

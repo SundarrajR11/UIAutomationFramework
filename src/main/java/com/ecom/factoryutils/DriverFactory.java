@@ -1,12 +1,22 @@
 package com.ecom.factoryutils;
 
+import com.ecom.constants.FrameConstants;
 import com.ecom.enums.EBrowsers;
+import com.ecom.enums.Econfig;
 import com.ecom.exceptions.InValidBrowserEnteredException;
+import com.ecom.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 
 /**
  * Factory class for creating WebDriver instances based on browser type.
@@ -22,27 +32,26 @@ import org.openqa.selenium.safari.SafariDriver;
  * </pre>
  */
 public final class DriverFactory {
-    private DriverFactory() {}
+    private DriverFactory() {
+    }
 
-    /**
-     * Creates a new instance of WebDriver based on the specified browser name.
-     *
-     * @param browserName the name of the browser (e.g., "chrome", "firefox", "edge", "safari").
-     * @return a new instance of WebDriver corresponding to the specified browser.
-     * @throws InValidBrowserEnteredException if an invalid browser name is provided.
-     */
-    public static WebDriver getDriverInstance(String browserName) {
+    public static WebDriver getDriverInstance(String browserName) throws MalformedURLException {
+
         WebDriver driver;
-        if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.CHROME))) {
-            driver = new ChromeDriver();
-        } else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.FIREFOX))) {
-            driver = new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.EDGE))) {
-            driver = new EdgeDriver();
-        } else if (browserName.equalsIgnoreCase(String.valueOf(EBrowsers.SAFARI))) {
-            driver = new SafariDriver();
-        } else {
-            throw new InValidBrowserEnteredException("Provided browser " + browserName + " is invalid,Retry with valid browser!");
+
+        if (ConfigReader.getValue(Econfig.RUN_MODE).equalsIgnoreCase("remote")) {
+                DesiredCapabilities caps = new DesiredCapabilities();
+                caps.setBrowserName(browserName.toLowerCase());
+                driver = new RemoteWebDriver(new URL(FrameConstants.getRunModeUrl()), caps);
+        }
+        else {
+            EBrowsers eBrowsers = EBrowsers.valueOf(browserName.toUpperCase());
+            switch (eBrowsers) {
+                case CHROME -> driver = new ChromeDriver();
+                case EDGE -> driver = new EdgeDriver();
+                case FIREFOX -> driver = new FirefoxDriver();
+                default -> throw new InValidBrowserEnteredException("Provided browser " + browserName + " is invalid,Retry with valid browser!");
+            }
         }
         return driver;
     }

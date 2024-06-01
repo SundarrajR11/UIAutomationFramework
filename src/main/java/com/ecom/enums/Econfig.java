@@ -58,5 +58,9 @@ public enum Econfig {
 	/**
 	 * Represents the setting for enabling cross-browser testing.
 	 */
-	CROSSBROWSER_TESTING
+	CROSSBROWSER_TESTING,
+	/**
+	 * Represents the setting for enabling run mode.
+	 */
+	RUN_MODE
 }

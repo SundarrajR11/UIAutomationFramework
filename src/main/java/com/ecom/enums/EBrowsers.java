@@ -20,9 +20,4 @@ public enum EBrowsers {
     /**
      * Represents the Mozilla Firefox browser.
      */
-    FIREFOX,
-    /**
-     * Represents the Apple Safari browser.
-     */
-    SAFARI
-}
+    FIREFOX }

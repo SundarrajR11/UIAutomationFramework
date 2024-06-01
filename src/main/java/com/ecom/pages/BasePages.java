@@ -11,21 +11,21 @@ public class BasePages {
     protected BasePages(){
 
     }
-    protected void click(By by, EwaitStrategy waitStrategy,String elementName){
-        WebElement element = WaitFactory.performExplicitWait(waitStrategy, by);
+    protected void waitAndClick(By by, String elementName){
+        WebElement element = WaitFactory.performExplicitWait(EwaitStrategy.CLICKABLE, by);
         element.click();
         ExtentLogger.pass(elementName+" is clicked",true);
     }
-    protected void sendKeys(By by, String value, EwaitStrategy waitStrategy,String elementName){
-        WebElement element = WaitFactory.performExplicitWait(waitStrategy, by);
+    protected void waitAndSendKeys(By by, String value,String elementName){
+        WebElement element = WaitFactory.performExplicitWait(EwaitStrategy.VISIBLE, by);
         element.sendKeys(value);
         ExtentLogger.pass(value+" is entered in "+ elementName,true);
     }
     protected String getPageTitle(){
         return DriverManager.getDriver().getTitle();
     }
-    protected String getText(By by,EwaitStrategy waitStrategy, String elementName){
-        WebElement element = WaitFactory.performExplicitWait(waitStrategy, by);
+    protected String getText(By by, String elementName){
+        WebElement element = WaitFactory.performExplicitWait(EwaitStrategy.VISIBLE, by);
         ExtentLogger.pass(elementName+"Text retrieved successfully");
         return element.getText();
     }

@@ -1,6 +1,5 @@
 package com.ecom.pages;
 
-import com.ecom.enums.EwaitStrategy;
 import org.openqa.selenium.By;
 
 public final class AmazonHomePage extends BasePages{
@@ -8,7 +7,7 @@ public final class AmazonHomePage extends BasePages{
     private static final By HomeHamBurgerMenu= By.xpath("//a[@id='nav-hamburger-menu']");
 
     public AmazonHumBugerMenuPage clickHomeHamBurgerMenu(){
-        click(HomeHamBurgerMenu, EwaitStrategy.CLICKABLE,"HomeHamBurgerMenu");
+        waitAndClick(HomeHamBurgerMenu, "HomeHamBurgerMenu");
         return new AmazonHumBugerMenuPage();
     }
 }

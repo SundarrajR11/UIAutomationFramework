@@ -1,6 +1,5 @@
 package com.ecom.pages;
 
-import com.ecom.enums.EwaitStrategy;
 import com.ecom.utils.DynamicXpath;
 import org.openqa.selenium.By;
 
@@ -12,17 +11,17 @@ public final class AmazonHumBugerMenuPage extends BasePages{
 
     public AmazonBestSellersPages clickBestSellers(String menuText){
         String bestSellersXpath= DynamicXpath.getXpath(CommonXpath,menuText);
-        click(By.xpath(bestSellersXpath), EwaitStrategy.CLICKABLE,"Best Sellers");
+        waitAndClick(By.xpath(bestSellersXpath), "Best Sellers");
         return new AmazonBestSellersPages();
     }
     public AmazonNewReleasesPage clickNewRelease(String menuText){
         String newReleaseXpath = DynamicXpath.getXpath(CommonXpath,menuText);
-        click(By.xpath(newReleaseXpath),EwaitStrategy.CLICKABLE,"New Releases");
+        waitAndClick(By.xpath(newReleaseXpath), "New Releases");
         return new AmazonNewReleasesPage();
     }
     public AmazonMoversAndShakersPage clickMoverandShakers(String menuText){
         String newReleaseXpath = DynamicXpath.getXpath(CommonXpath,menuText);
-        click(By.xpath(newReleaseXpath),EwaitStrategy.CLICKABLE,"Movers and Shakers");
+        waitAndClick(By.xpath(newReleaseXpath), "Movers and Shakers");
         return new AmazonMoversAndShakersPage();
     }
 }

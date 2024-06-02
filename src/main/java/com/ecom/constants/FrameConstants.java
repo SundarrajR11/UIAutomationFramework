@@ -73,7 +73,7 @@ public final class FrameConstants {
 	/**
 	 * URL of the remote host.
 	 */
-	private static final String RUN_MODE_URL = "http://localhost:4444/";
+	private static final String RUN_MODE_URL = "http://localhost:4444/wd/hub";
 
 
 	/**

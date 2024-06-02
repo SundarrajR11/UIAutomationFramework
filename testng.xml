@@ -6,9 +6,11 @@
     <listener class-name="com.ecom.listeners.MethodInterceptor"/>
     <listener class-name="com.ecom.listeners.AnnotationTransformer"/>
   </listeners>
-  <test thread-count="1" name="Test" parallel="methods">
+  <test thread-count="3" name="Test" parallel="methods">
     <classes>
       <class name="com.ecom.tests.BestSellersTest"/>
+      <class name="com.ecom.tests.NewReleaseTest"/>
+      <class name="com.ecom.tests.MoversandShakersTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

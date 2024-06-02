@@ -4,39 +4,45 @@
 version: "3"
 services:
   selenium-hub:
-    image: selenium/hub:latest
-    container_name: selenium-hub
-    restart: always
+    image: selenium/hub
     ports:
-      - "4444:4444"
+        - "4444:4444"
+    environment:
+      - GRID_TIMEOUT=30
+      - GRID_BROWSER_TIMEOUT=60
+    restart: always
   chrome:
-    image: selenium/node-chrome:latest
+    image: selenium/node-chrome
     volumes:
       - /dev/shm:/dev/shm
     depends_on:
       - selenium-hub
     environment:
-      - HUB_HOST=selenium-hub
-      - HUB_PORT=4444
-    restart: on-failure:3
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    restart: on-failure
   edge:
-    image: selenium/node-edge:latest
+    image: selenium/node-edge
     volumes:
       - /dev/shm:/dev/shm
     depends_on:
       - selenium-hub
     environment:
-      - HUB_HOST=selenium-hub
-      - HUB_PORT=4444
-    restart: on-failure:3
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    restart: on-failure
   firefox:
-    image: selenium/node-firefox:latest
+    image: selenium/node-firefox
     volumes:
       - /dev/shm:/dev/shm
     depends_on:
       - selenium-hub
     environment:
-      - HUB_HOST=selenium-hub
-      - HUB_PORT=4444\
-    restart: on-failure:3
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    restart: on-failure
+
 

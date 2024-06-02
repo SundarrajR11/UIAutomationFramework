@@ -38,11 +38,7 @@ public final class DriverStarterFinisher {
 	 */
 	public static void initDriver(String browserName) {
 		if (Objects.isNull(getDriver())) {
-			try {
-				setDriver(DriverFactory.getDriverInstance(browserName));
-			} catch (MalformedURLException e) {
-				throw new RuntimeException(e);
-			}
+			setDriver(DriverFactory.getDriverInstance(browserName));
 		}
 		getDriver().get(ConfigReader.getValue(Econfig.URL));
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));

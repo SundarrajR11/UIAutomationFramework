@@ -15,7 +15,7 @@ public final class MoversandShakersTest extends BasicTests{
 
     }
     @FrameworkAnnotations(authors = EAuthors.SUNDARRAJ,categories = ECategories.REGRESSION,devices = EDevices.WEB)
-    @Test
+    @Test(testName = "HC-2")
     public void moversandShakersTest(Map<String,String> data){
 
         AmazonHomePage amazonHomePage = new AmazonHomePage();

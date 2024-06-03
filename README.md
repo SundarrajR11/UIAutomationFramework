@@ -26,7 +26,7 @@ and a parallel Dockerized Selenium Grid, our framework offers unparalleled effic
 
 ### 🚀 Getting Started
 
-**Clone the Repository:** git clone https://github.com/SundarrajR11/E-CommerceOpenSource.git
+**Clone the Repository:** git clone [https://github.com/SundarrajR11/E-CommerceOpenSource.git]()
 
 **Install Dependencies:** mvn clean install
 

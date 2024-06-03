@@ -16,7 +16,7 @@ public final class NewReleaseTest extends BasicTests {
 
     }
     @FrameworkAnnotations(authors = EAuthors.DEVAYANI,categories = ECategories.SMOKE,devices = EDevices.DESKTOP)
-    @Test
+    @Test(testName = "HC-3")
     public void newReleaseTest(Map<String,String> data){
 
         AmazonHomePage amazonHomePage = new AmazonHomePage();

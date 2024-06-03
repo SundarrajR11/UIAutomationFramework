@@ -14,7 +14,7 @@ public final class BestSellersTest extends BasicTests {
     private BestSellersTest(){}
 
     @FrameworkAnnotations(authors = {EAuthors.SUNDARRAJ,EAuthors.MEENAKSHI,EAuthors.RAGUNATHAN,EAuthors.DEVAYANI},categories = ECategories.SANITY,devices = EDevices.MOBILE)
-    @Test
+    @Test(testName = "HC-1")
     public void bestSellersTest(Map<String,String> data){
         AmazonHomePage amazonHomePage = new AmazonHomePage();
         String BestSellersHeadingText=amazonHomePage.clickHomeHamBurgerMenu()

@@ -64,6 +64,7 @@ public final class ConfigReader {
 				CONFIG_MAP.put(String.valueOf(eMap.getKey()), String.valueOf(eMap.getValue()).trim());
 			}
 		} catch (IOException e) {
+
 			e.printStackTrace();
 			System.exit(0);
 		}

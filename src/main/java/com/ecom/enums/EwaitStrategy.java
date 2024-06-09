@@ -29,8 +29,4 @@ public enum EwaitStrategy {
      */
     VISIBLE,
 
-    /**
-     * Does not apply any waiting strategy.
-     */
-    NONE
 }

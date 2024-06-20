@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
+import java.util.function.Consumer;
 
 import com.ecom.enums.Econfig;
 import com.ecom.constants.FrameConstants;
@@ -60,9 +61,11 @@ public final class ConfigReader {
 	static {
 		try (FileInputStream file = new FileInputStream(FrameConstants.getConfigFilePath())) {
 			prop.load(file);
-			for (Map.Entry<Object, Object> eMap : prop.entrySet()) {
+			/*for (Map.Entry<Object, Object> eMap : prop.entrySet()) {
 				CONFIG_MAP.put(String.valueOf(eMap.getKey()), String.valueOf(eMap.getValue()).trim());
-			}
+			}*/
+			prop.forEach((key, value) -> CONFIG_MAP.put((String) key, (String) value));
+
 		} catch (IOException e) {
 
 			e.printStackTrace();

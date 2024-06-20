@@ -56,11 +56,17 @@ public final class DataProviderLocal {
         }
         List<Map<String, String>> executableData = new ArrayList<>();
 
-        for (Map<String, String> credentialData : DataProviderLocal.credentialData) {
+        /*for (Map<String, String> credentialData : credentialData) {
             if (credentialData.get("testname").equalsIgnoreCase(testName) && credentialData.get("execute").equalsIgnoreCase("yes")) {
                 executableData.add(credentialData);
             }
-        }
+        }*/
+
+        credentialData.stream()
+                .filter(c-> c.get("testname").equalsIgnoreCase(testName)  &&
+                        c.get("execute").equalsIgnoreCase("yes"))
+                .forEach(executableData::add);
+
         return executableData.toArray();
     }
 }
